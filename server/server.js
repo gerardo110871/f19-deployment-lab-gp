@@ -6,6 +6,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// middleware
+app.use(express.static(path.join(__dirname, '../client')))
+
 
 const port = process.env.PORT || 4005;
 
