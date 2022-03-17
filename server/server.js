@@ -22,15 +22,16 @@ rollbar.log('Hello world!')
 app.use(express.static(path.join(__dirname, '../client')))
 app.use('/js', express.static(path.join(__dirname, 'client/main.js')))
 app.use("/styles", express.static(path.join(__dirname, '../client/index.css')))
-app.use("/favicon", express.static(path.join(__dirname, '../favicon/favicon.ico')))
+// app.use("/favicon", express.static(path.join(__dirname, '../favicon/favicon.ico')))
 
 
 // endpoints
 
 //this is the same as the favicon above
-// app.get('/favicon', function (req, res) {
-//     res.sendFile(path.join(__dirname, '../favicon/favicon.ico'))
-// })
+app.get('/favicon', function (req, res) {
+    rollbar.info('Favicon served successfully')
+    res.sendFile(path.join(__dirname, '../favicon/favicon.ico'))
+})
  
 
 //server port info
