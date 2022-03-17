@@ -1,8 +1,8 @@
-let btn = document.querySelector('button')
+let btn = document.querySelector('#btn')
 
 console.log('loaded diapers')
 
-function submit(event) {
+function submit() {
     let nameInput = document.querySelector('input')
     
     axios.post('/name', {name: nameinput.value})
