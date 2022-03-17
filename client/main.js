@@ -3,9 +3,9 @@ let btn = document.querySelector('#btn')
 console.log('loaded diapers')
 
 function submit() {
-    let nameInput = document.querySelector('input')
+    let nameInput = document.querySelector('#btn')
     
-    axios.post('/name', {name: nameInput.value})
+    axios.post('/names', {name: nameInput.value})
     .then(res => {
         nameInput.value = ""
     })
