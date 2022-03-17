@@ -1,3 +1,4 @@
+//boilerplate code
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
@@ -12,6 +13,16 @@ app.use('/js', express.static(path.join(__dirname, 'public/main.js')))
 app.use("/styles", express.static(path.join(__dirname, '../client/index.css')))
 app.use("/favicon", express.static(path.join(__dirname, '../favicon/favicon.ico')))
 
+
+// endpoints
+
+//this is the same as the favicon above
+// app.get('/favicon', function (req, res) {
+//     res.sendFile(path.join(__dirname, '../favicon/favicon.ico'))
+// })
+
+
+//server port info
 const port = process.env.PORT || 4005;
 
 app.listen(port, () => {
