@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client')))
 app.use('/js', express.static(path.join(__dirname, 'public/main.js')))
 app.use("/styles", express.static(path.join(__dirname, '../client/index.css')))
+app.use(express.static(path.join(__dir, '../favicon/favicon.ico')))
 
 const port = process.env.PORT || 4005;
 
